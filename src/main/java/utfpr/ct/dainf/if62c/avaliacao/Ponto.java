@@ -11,6 +11,19 @@ package utfpr.ct.dainf.if62c.avaliacao;
 public class Ponto {
     private double x, y, z;
 
+    public Ponto() {
+        x = 0;
+        y = 0;
+        z = 0;
+    }
+
+    public Ponto(double x, double y, double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    
+
     /**
      * Retorna no nome não-qualificado da classe.
      * @return O nome não qualificado da classe.
@@ -41,6 +54,24 @@ public class Ponto {
 
     public void setZ(double z) {
         this.z = z;
+    }
+    
+    @Override
+    public String toString() {
+        return String.format(this.getNome(), x, y, z);  
+    }
+    
+    public boolean equals(Ponto a){
+        if(this.x == a.x && this.y == a.y && this.z == a.z){
+            return true;
+        }
+        return false;
+    }
+    
+    public double dist(Ponto a){
+        double dist = Math.sqrt(Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.y, 2) + Math.pow(this.z - a.z, 2) );
+        //System.out.println("dist = " + dist);
+        return dist;
     }
 
     @Override
