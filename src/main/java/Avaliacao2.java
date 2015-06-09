@@ -25,6 +25,8 @@ public class Avaliacao2 {
         pol.set(2, c);
         // "Comprimento da poligonal = 123,456". 
         System.out.println("Comprimento da poligonal = " + pol.getComprimento());
+        System.out.println("a= " + a);
+        System.out.println("a = b ?:" + a.equals(c));
     }
     
 }

@@ -20,6 +20,6 @@ public class PontoYZ extends Ponto2D{
     
     @Override
     public String toString(){
-        return String.format(this.getNome(), getY(), getZ());
+        return String.format(this.getNome()+ "(" + getY() +"," + getZ() + ")");
     }
 }

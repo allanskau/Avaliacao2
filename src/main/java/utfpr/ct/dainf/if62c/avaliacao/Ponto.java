@@ -62,15 +62,15 @@ public class Ponto {
     }
     
     public boolean equals(Ponto a){
-        if(this.x == a.x && this.y == a.y && this.z == a.z){
+        if(this.x == a.x && this.y == a.y && this.z == a.z || a == null){
             return true;
         }
         return false;
     }
     
     public double dist(Ponto a){
-        double dist = Math.sqrt(Math.pow(this.x - a.x, 2) + Math.pow(this.y - a.y, 2) + Math.pow(this.z - a.z, 2) );
-        //System.out.println("dist = " + dist);
+        double dist = Math.sqrt(Math.pow(x - a.x, 2) + Math.pow(y - a.y, 2) + Math.pow(z - a.z, 2) );
+        System.out.println("dist = " + dist);
         return dist;
     }
 
